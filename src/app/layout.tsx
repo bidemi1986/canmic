@@ -27,10 +27,10 @@ export const metadata: Metadata = {
 };
 
 const contactInfo = {
-  address: "123 Business Avenue, Tech Park",
-  city: "Toronto, ON M5V 2T6",
-  phone: "+1 (647) 123-4567",
-  email: "contact@canmic.com",
+  address: "34 North Franklin Avenue",
+  city: "Pinedale, WY 82941",
+  phone: "+1 (469) 715-5640",
+  email: "contact@canmicconsulting.com",
 }
 
 const footerLinks = {
