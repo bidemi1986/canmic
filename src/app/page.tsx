@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Brain, Cog, Database, Cloud, Smartphone, Users, ChevronRight, ArrowRight } from 'lucide-react'
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from 'next/link'
 import { Parallax } from 'react-parallax';
@@ -13,7 +13,7 @@ const expertiseItems = [
   {
     icon: Brain,
     title: "Machine Learning",
-    description: "Unlock the power of data-driven insights with our custom ML models for trend prediction and process optimization.",
+    description: "Unlock the power of data-driven insights with our custom ML models.",
     href: "/services/machine-learning"
   },
   {
@@ -100,8 +100,8 @@ export default function Home() {
               Your Trusted Partner in Innovation
             </motion.h1>
             <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-              We empower businesses with the right solutions to thrive in today's fast-evolving landscape.
-              From startups to enterprises, we're here to elevate your success.
+              We empower businesses with the right solutions to thrive in today&apos;s fast-evolving landscape.
+              From startups to enterprises, we&apos;re here to elevate your success.
             </p>
             <Link href="/contact">
               <Button size="lg" className="mt-6">
@@ -191,7 +191,7 @@ export default function Home() {
                     transition={{ delay: 0.2 }}
                     className="text-white/90 text-lg mb-8"
                   >
-                    At Canmic, we're not just about solving today's problems—we're creating the future. 
+                    At Canmic, we&apos;re not just about solving today&apos;s problems—we&apos;re creating the future. 
                     Our in-house AI-powered apps and software for the internet are designed to revolutionize 
                     the way you work, connect, and grow.
                   </motion.p>
@@ -263,7 +263,7 @@ export default function Home() {
             whileInView={{ opacity: [0, 1], y: [20, 0] }}
             viewport={{ once: true }}
           >
-            Let's Build the Future Together
+            Let&apos;s Build the Future Together
           </motion.h2>
           <p className="mx-auto max-w-[600px] text-muted-foreground mb-8">
             Ready to take your business to the next level? Discover how Canmic can help you innovate, 

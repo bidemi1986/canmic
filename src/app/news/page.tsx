@@ -52,7 +52,7 @@ const NewsPage = () => {
               Latest News
             </h1>
             <p className="text-xl text-muted-foreground">
-              Stay updated with Canmic's latest developments and achievements
+              Stay updated with Canmic&apos;s latest developments and achievements
             </p>
           </motion.div>
         </div>
