@@ -38,20 +38,72 @@ const ConsultingPage = () => {
 
   const industries = [
     {
+      title: "Energy & Resources",
+      areas: [
+        {
+          name: "Oil & Gas",
+          subareas: ["Upstream", "Midstream", "Downstream", "Trading"]
+        },
+        {
+          name: "Mining",
+          subareas: ["Precious Metals", "Base Metals", "Industrial Minerals", "Mining Technology"]
+        },
+        {
+          name: "Renewable Energy",
+          subareas: ["Solar", "Wind", "Hydroelectric", "Energy Storage", "Green Hydrogen"]
+        }
+      ]
+    },
+    {
+      title: "Manufacturing & Industrial",
+      areas: [
+        {
+          name: "Automotive",
+          subareas: ["OEMs", "Suppliers", "Electric Vehicles", "Connected Cars"]
+        },
+        {
+          name: "Construction",
+          subareas: ["Commercial", "Residential", "Infrastructure", "Smart Buildings"]
+        },
+        {
+          name: "Industrial Equipment",
+          subareas: ["Heavy Machinery", "Automation", "Process Control"]
+        }
+      ]
+    },
+    {
       title: "Financial Services",
-      areas: ["Banking", "Insurance", "FinTech", "Investment"]
+      areas: [
+        {
+          name: "Banking",
+          subareas: ["Retail", "Commercial", "Investment", "Digital Banking"]
+        },
+        {
+          name: "Insurance",
+          subareas: ["Life & Health", "Property & Casualty", "Reinsurance"]
+        },
+        {
+          name: "FinTech",
+          subareas: ["Payments", "Blockchain", "Digital Assets", "RegTech"]
+        }
+      ]
     },
     {
-      title: "Healthcare",
-      areas: ["Hospitals", "Telemedicine", "Medical Devices", "Healthcare IT"]
-    },
-    {
-      title: "Manufacturing",
-      areas: ["Smart Manufacturing", "Supply Chain", "Quality Control", "IoT"]
-    },
-    {
-      title: "Retail",
-      areas: ["E-commerce", "Omnichannel", "Supply Chain", "Customer Experience"]
+      title: "Education & Research",
+      areas: [
+        {
+          name: "Higher Education",
+          subareas: ["Universities", "Research Institutions", "Online Learning", "EdTech"]
+        },
+        {
+          name: "Professional Development",
+          subareas: ["Corporate Training", "Certification Programs", "Skills Assessment"]
+        },
+        {
+          name: "Research & Development",
+          subareas: ["Academic Research", "Industry Collaboration", "Innovation Centers"]
+        }
+      ]
     }
   ]
 
@@ -138,10 +190,10 @@ const ConsultingPage = () => {
         </div>
       </section>
 
-      <section className="py-24 bg-muted/30">
+      <section className="py-24 bg-gradient-to-br from-primary/15 via-purple-500/10 to-slate-950/10">
         <div className="container mx-auto px-4 max-w-7xl">
           <h2 className="text-3xl font-bold tracking-tighter mb-12 text-center">Industries We Serve</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {industries.map((industry, index) => (
               <motion.div
                 key={industry.title}
@@ -150,17 +202,24 @@ const ConsultingPage = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Card>
+                <Card className="h-full backdrop-blur-sm bg-white/50 dark:bg-slate-950/50">
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-bold mb-4">{industry.title}</h3>
-                    <div className="flex flex-wrap gap-2">
+                    <h3 className="text-2xl font-bold mb-6 text-primary">{industry.title}</h3>
+                    <div className="space-y-6">
                       {industry.areas.map((area) => (
-                        <span
-                          key={area}
-                          className="px-3 py-1 bg-primary/10 rounded-full text-sm text-primary"
-                        >
-                          {area}
-                        </span>
+                        <div key={area.name} className="space-y-2">
+                          <h4 className="text-lg font-semibold">{area.name}</h4>
+                          <div className="flex flex-wrap gap-2">
+                            {area.subareas.map((subarea) => (
+                              <span
+                                key={subarea}
+                                className="px-3 py-1 bg-primary/10 rounded-full text-sm text-primary hover:bg-primary/20 transition-colors"
+                              >
+                                {subarea}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
                       ))}
                     </div>
                   </CardContent>
