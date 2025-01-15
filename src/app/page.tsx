@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Brain, Cog, Database, Cloud, Smartphone, Users, ChevronRight, ArrowRight } from 'lucide-react'
+import { Brain, Cog, Shield, Cloud, Smartphone, Users, ChevronRight, ArrowRight } from 'lucide-react'
 import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from 'next/link'
@@ -23,9 +23,9 @@ const expertiseItems = [
     href: "/services/devops"
   },
   {
-    icon: Database,
+    icon: Shield,
     title: "Cybersecurity",
-    description: "Maximize Oracle's potential with expert guidance in database management and enterprise applications.",
+    description: "We provide comprehensive cybersecurity solutions to protect your business from cyber threats.",
     href: "/services/cybersecurity"
   },
   {

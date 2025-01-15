@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
-import { Brain, Cog, Database, Cloud, Smartphone, Users } from 'lucide-react'
+import { Brain, Cog, Shield, Cloud, Smartphone, Users } from 'lucide-react'
 
 const ServicesPage = () => {
   const services = [
@@ -21,9 +21,9 @@ const ServicesPage = () => {
       href: "/services/devops"
     },
     {
-      icon: Database,
+      icon: Shield, 
       title: "Cybersecurity",
-      description: "Maximize Oracle's potential with expert guidance in database management.",
+      description: "We provide comprehensive cybersecurity solutions to protect your business from cyber threats.",
       href: "/services/cybersecurity"
     },
     {
